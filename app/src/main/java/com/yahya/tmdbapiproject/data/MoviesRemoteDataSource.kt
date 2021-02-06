@@ -3,7 +3,7 @@ package com.yahya.tmdbapiproject.data
 
 import com.yahya.tmdbapiproject.repository.network.*
 import javax.inject.Inject
-const val API_KEY="de559ab1023865782cf170e64a30fd41"
+const val API_KEY="Enter your key here"
 /* Works with the TMDB API to get data. */
 class MoviesRemoteDataSource @Inject constructor(private val service: ApiInterface) : BaseDataSource() {
 
