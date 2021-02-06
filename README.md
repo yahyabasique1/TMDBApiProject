@@ -10,7 +10,7 @@ On Clicking of card , a complete info about the movie will be shown
 -   Pagination with paging3 library along with header and footer with offline support with EoomDB
 -   Clean Architecture with MVVM 
 -   Modern architecture (Clean Architecture, Model-View-ViewModel)
--   View Bindng
+-   View Bindng, Material Design
 -   Navigation, single-activity architecture with [Jetpack Navigation](https://developer.android.com/guide/navigation)
 -   Cache local data with [Room Persistence Library](https://developer.android.com/topic/libraries/architecture/room)
 -   ViewModel, LiveData, Lifecycle, ... with [Android Jetpack](https://developer.android.com/jetpack)
@@ -20,8 +20,8 @@ On Clicking of card , a complete info about the movie will be shown
 
 # Screenshots
 
-|                         |                         |                         |                         |
-|        :---:            |          :---:          |        :---:            |          :---:          |
+|                         |                         |                         |                         
+|        :---:            |          :---:          |        :---:            |      
 | ![](screenshots/Screenshot1.png) | ![](screenshots/Screenshot2.png) 
 
 |                         |                                       |
