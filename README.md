@@ -7,7 +7,7 @@ On Clicking of card , a complete info about the movie will be shown
 
 -   100% [Kotlin](https://kotlinlang.org/)
 -   Kotlin Coroutines with Flow
--   Pagination with paging3 library along with header and footer with offline support with EoomDB
+-   Pagination with paging3 library along with header and footer with offline support with RoomDB
 -   Clean Architecture with MVVM 
 -   Modern architecture (Clean Architecture, Model-View-ViewModel)
 -   View Bindng, Material Design
