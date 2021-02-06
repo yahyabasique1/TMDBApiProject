@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewHeadLines" >
+
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
+
+    <style name="TextViewDetails" >
+
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/black</item>
+
+
+    </style>
+
+    <style name="RatingBar"
+        parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+</resources>

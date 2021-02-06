@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    android:layout_height="250dp"
+    android:id="@+id/clMovie"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/cvGradient"
+        app:cardCornerRadius="@dimen/margin_xsmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMovieBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            />
+
+        <ImageView
+            android:id="@+id/ivMoreOptions"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_more_vert"
+            android:layout_gravity="end"
+            android:layout_margin="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewHeadLines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_xsmall"
+        android:maxLines="2"
+        android:elevation="@dimen/margin_xsmall"
+        app:layout_constraintBottom_toTopOf="@+id/tvChannel"
+        app:layout_constraintEnd_toEndOf="@+id/cvGradient"
+        app:layout_constraintStart_toStartOf="@+id/cvGradient"
+        android:textColor="#000000"
+        android:fontFamily="@font/librefranklin_bold"
+        />
+
+    <TextView
+        android:id="@+id/tvChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        tools:text="CNccccN"
+        android:elevation="@dimen/margin_xsmall"
+        android:textColor="#000000"
+        android:textSize="@dimen/text_xsmall"
+        app:layout_constraintBottom_toBottomOf="@+id/cvGradient"
+        app:layout_constraintStart_toStartOf="@+id/cvGradient" />
+
+    <TextView
+        android:id="@+id/tvDateAndSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_xsmall"
+        android:elevation="@dimen/margin_xsmall"
+        android:textColor="#000000"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="@+id/cvGradient"
+        app:layout_constraintStart_toEndOf="@+id/tvChannel"
+        tools:text="2019-10-09"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
