@@ -13,10 +13,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.yahya.tmdbapiproject.databinding.FragmentMovieDetailBinding
 import com.yahya.tmdbapiproject.di.injectViewModel
 import com.yahya.tmdbapiproject.extensions.LinePagerIndicatorDecoration
+import com.yahya.tmdbapiproject.extensions.gone
 import com.yahya.tmdbapiproject.extensions.loadUrl
+import com.yahya.tmdbapiproject.extensions.visible
 import com.yahya.tmdbapiproject.repository.network.MoviesData
+import com.yahya.tmdbapiproject.util.isNetworkAvailable
 import com.yahya.tmdbapiproject.view.moviedetail.adapter.MovieDetailAdapter
 import dagger.android.support.DaggerFragment
+import kotlinx.android.synthetic.main.fragment_movie_detail.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -61,6 +65,11 @@ class MovieDetail : DaggerFragment() {
         super.onViewCreated(view, savedInstanceState)
         initDataMembers()
         setUpViews()
+        if(isNetworkAvailable(requireContext()).not()){
+            fragmentMovieDetailBinding.tvImageHeader.gone()
+        }else {
+            fragmentMovieDetailBinding.tvImageHeader.visible()
+        }
         fetchMovieImages()
     }
 
@@ -71,10 +80,9 @@ class MovieDetail : DaggerFragment() {
     }
 
     private fun setUpViews() {
-        moviesData?.backdropPath?.let {
-            fragmentMovieDetailBinding.ivBannerImage.loadUrl("https://image.tmdb.org/t/p/w342/${it}")
+        fragmentMovieDetailBinding.ivBannerImage.loadUrl("https://image.tmdb.org/t/p/w342/${moviesData.backdropPath}")
 
-        }
+
         fragmentMovieDetailBinding.rvMovieImages.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
@@ -119,7 +127,7 @@ class MovieDetail : DaggerFragment() {
     }
 
     override fun onDestroyView() {
-        _fragmentMovieDetailBinding=null
+        _fragmentMovieDetailBinding = null
         super.onDestroyView()
     }
 }
